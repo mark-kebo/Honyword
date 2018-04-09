@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Honyword - Offline Dictionary</string>
+
+    <string name="dummy_small_content">This is offline dictionary for you!</string>
+    <string name="dummy_content">WELCOME</string>
+    <string name="dummy_content_second">to Honyword</string>
+    <string name="we_will_help_you_to_find_words">We will help you to find words</string>
+    <string name="start_using">Start using</string>
+    <string name="search">Search</string>
+</resources>
