@@ -21,7 +21,8 @@
         android:paddingEnd="15dp"
         android:paddingStart="15dp"
         app:iconifiedByDefault="false"
-        app:queryHint="@string/search" />
+        app:queryHint="@string/search"
+        app:queryBackground="@color/transparent"/>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rvWord"

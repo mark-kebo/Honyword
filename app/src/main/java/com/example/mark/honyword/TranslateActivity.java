@@ -8,6 +8,9 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.SearchView.*;
 import android.support.v7.widget.SearchView;
+import android.widget.AutoCompleteTextView;
+import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 
@@ -42,9 +45,16 @@ public class TranslateActivity extends AppCompatActivity {
         rvWord.setAdapter(mWordAdapter);
 
         final SearchView searchView = findViewById(R.id.searchView);
-//        TextView searchText = searchView.findViewById(android.support.v7.appcompat.R.id.search_src_text);
-//        Typeface myCustomFont = Typeface.createFromFile("@font/normal");
-//        searchText.setTypeface(myCustomFont);
+        TextView searchText = searchView.findViewById(android.support.v7.appcompat.R.id.search_src_text);
+        Typeface myCustomFont = Typeface.createFromAsset(getAssets(), "fonts/normal.otf");
+        searchText.setTypeface(myCustomFont);
+        searchText.setTextColor(getResources().getColor(R.color.colorPrimary));
+        searchText.setHintTextColor(getResources().getColor(R.color.colorAccent));
+        LinearLayout linearLayout1 = (LinearLayout) searchView.getChildAt(0);
+        LinearLayout linearLayout2 = (LinearLayout) linearLayout1.getChildAt(2);
+        LinearLayout linearLayout3 = (LinearLayout) linearLayout2.getChildAt(1);
+        AutoCompleteTextView autoComplete = (AutoCompleteTextView) linearLayout3.getChildAt(0);
+        autoComplete.setTextSize(22);
         searchView.setOnQueryTextListener(new OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {

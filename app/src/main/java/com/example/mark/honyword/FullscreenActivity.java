@@ -2,6 +2,7 @@ package com.example.mark.honyword;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -17,7 +18,6 @@ public class FullscreenActivity extends AppCompatActivity {
 
     private final Handler mHideHandler = new Handler();
     private View mContentView;
-    private Button mButtonStart;
     private final Runnable mHidePart2Runnable = new Runnable() {
         @SuppressLint("InlinedApi")
         @Override
@@ -55,10 +55,10 @@ public class FullscreenActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         setContentView(R.layout.activity_fullscreen);
         mContentView = findViewById(R.id.fullscreen_first_d);
-        mButtonStart = findViewById(R.id.button_start_using);
+        Button buttonStart = findViewById(R.id.button_start_using);
 
         // Hide UI first
         ActionBar actionBar = getSupportActionBar();
@@ -70,7 +70,7 @@ public class FullscreenActivity extends AppCompatActivity {
         mHideHandler.removeCallbacks(mShowPart2Runnable);
         mHideHandler.postDelayed(mHidePart2Runnable, 0);
 
-        mButtonStart.setOnClickListener(new View.OnClickListener() {
+        buttonStart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent;
