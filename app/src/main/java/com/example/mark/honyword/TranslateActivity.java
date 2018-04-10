@@ -1,12 +1,14 @@
 package com.example.mark.honyword;
 
 import android.content.Context;
+import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.SearchView.*;
 import android.support.v7.widget.SearchView;
+import android.widget.TextView;
 
 
 import com.example.mark.honyword.adapters.WordAdapter;
@@ -40,6 +42,9 @@ public class TranslateActivity extends AppCompatActivity {
         rvWord.setAdapter(mWordAdapter);
 
         final SearchView searchView = findViewById(R.id.searchView);
+//        TextView searchText = searchView.findViewById(android.support.v7.appcompat.R.id.search_src_text);
+//        Typeface myCustomFont = Typeface.createFromFile("@font/normal");
+//        searchText.setTypeface(myCustomFont);
         searchView.setOnQueryTextListener(new OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {

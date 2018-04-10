@@ -5,8 +5,8 @@
     android:layout_height="wrap_content"
     android:background="@drawable/back"
     android:foreground="?android:attr/selectableItemBackground"
-    android:padding="8dp"
-    android:orientation="horizontal">
+    android:orientation="horizontal"
+    android:padding="8dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -18,15 +18,20 @@
             android:id="@+id/wordText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@android:color/background_dark"
-            android:textSize="21sp" />
+            android:fontFamily="@font/normal"
+            android:text="654654"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="26sp" />
+
 
         <TextView
             android:id="@+id/wordTextDef"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/colorPrimary"
-            android:textSize="20sp" />
+            android:fontFamily="@font/normal"
+            android:text="9844984"
+            android:textColor="@color/black_overlay_second"
+            android:textSize="22sp" />
 
     </LinearLayout>
 
