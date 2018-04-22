@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_gravity="center"
-        android:layout_marginBottom="60dp">
+        android:layout_marginBottom="64dp">
 
         <TextView
             android:id="@+id/fullscreen_first_d"
@@ -34,7 +34,7 @@
             android:id="@+id/fullscreen_second_d"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="30dp"
+            android:layout_marginBottom="16dp"
             android:layout_weight="1"
             android:fontFamily="@font/normal"
             android:text="@string/dummy_content_second"
@@ -57,8 +57,8 @@
 
     <Button
         android:id="@+id/button_start_using"
-        android:layout_width="180dp"
-        android:layout_height="50dp"
+        android:layout_width="176dp"
+        android:layout_height="48dp"
         android:layout_gravity="bottom|center_horizontal"
         android:layout_marginBottom="40dp"
         android:background="@drawable/start_button"

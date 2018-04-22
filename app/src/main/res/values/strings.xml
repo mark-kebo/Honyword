@@ -8,4 +8,6 @@
     <string name="start_using">Start using</string>
     <string name="search">Search</string>
     <string name="like">like</string>
+    <string name="like_button">Like Button</string>
+    <string name="todo">TODO</string>
 </resources>

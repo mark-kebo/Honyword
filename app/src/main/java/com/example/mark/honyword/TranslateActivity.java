@@ -8,8 +8,8 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.SearchView.*;
 import android.support.v7.widget.SearchView;
+import android.support.v7.widget.Toolbar;
 import android.widget.AutoCompleteTextView;
-import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -22,6 +22,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class TranslateActivity extends AppCompatActivity {
 
@@ -29,11 +30,16 @@ public class TranslateActivity extends AppCompatActivity {
     private List<DictionaryModel> data;
     private RecyclerView rvWord;
     private WordAdapter mWordAdapter;
+    private Toolbar mToolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_translate);
+
+        mToolbar = findViewById(R.id.toolbar_new);
+        setSupportActionBar(mToolbar);
+        Objects.requireNonNull(getSupportActionBar()).setDisplayShowTitleEnabled(false);
 
         rvWord = findViewById(R.id.rvWord);
         rvWord.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
@@ -54,7 +60,7 @@ public class TranslateActivity extends AppCompatActivity {
         LinearLayout linearLayout2 = (LinearLayout) linearLayout1.getChildAt(2);
         LinearLayout linearLayout3 = (LinearLayout) linearLayout2.getChildAt(1);
         AutoCompleteTextView autoComplete = (AutoCompleteTextView) linearLayout3.getChildAt(0);
-        autoComplete.setTextSize(22);
+        autoComplete.setTextSize(20);
         searchView.setOnQueryTextListener(new OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
